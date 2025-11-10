@@ -82,88 +82,36 @@ Check gas usage:
 
 ### 🔹 StakingApp.sol
 
-Function
+| Function | Visibility | Description |
+|-----------|-------------|-------------|
+| `depositTokens(uint256)` | External | Deposits a fixed amount of tokens into the contract. |
+| `withdraw()` | External | Withdraws the user's staked tokens. |
+| `claimRewards()` | External | Sends ETH reward to the user after the staking period elapses. |
+| `receive()` | External payable | Accepts ETH only from the contract owner (funds rewards pool). |
+| `changeStakingPeriod(uint256)` | Public onlyOwner | Updates the staking duration. |
 
-Visibility
-
-Description
-
-`depositTokens(uint256)`
-
-External
-
-Deposits a fixed amount of tokens into the contract.
-
-`withdraw()`
-
-External
-
-Withdraws the user's staked tokens.
-
-`claimRewards()`
-
-External
-
-Sends ETH reward to the user after the staking period elapses.
-
-`receive()`
-
-External payable
-
-Accepts ETH only from the contract owner (funds rewards pool).
-
-`changeStakingPeriod(uint256)`
-
-Public onlyOwner
-
-Updates the staking duration.
+---
 
 ### 🔹 StakingToken.sol
 
-Function
+| Function | Visibility | Description |
+|-----------|-------------|-------------|
+| `mint(uint256)` | External | Mints new tokens to the caller for demo/testing. |
 
-Visibility
-
-Description
-
-`mint(uint256)`
-
-External
-
-Mints new tokens to the caller for demo/testing.
 
 * * *
 
 🧠 Test Coverage Highlights
 ---------------------------
 
-Category
-
-Tests Included
-
-✅ Deployment
-
-Ensures both contracts deploy correctly
-
-✅ Ownership
-
-Validates only owner can modify staking parameters
-
-✅ Deposit
-
-Verifies correct deposit flow and reverts on wrong amounts
-
-✅ Withdraw
-
-Ensures proper token return and zero reset
-
-✅ Rewards
-
-Covers claiming logic, time manipulation, and ETH transfer
-
-✅ Failure Scenarios
-
-Reverts for missing ETH, premature claims, and invalid deposits
+| Category | Tests Included |
+|-----------|----------------|
+| ✅ **Deployment** | Ensures both contracts deploy correctly |
+| ✅ **Ownership** | Validates only owner can modify staking parameters |
+| ✅ **Deposit** | Verifies correct deposit flow and reverts on wrong amounts |
+| ✅ **Withdraw** | Ensures proper token return and zero reset |
+| ✅ **Rewards** | Covers claiming logic, time manipulation, and ETH transfer |
+| ✅ **Failure Scenarios** | Reverts for missing ETH, premature claims, and invalid deposits |
 
 * * *
 
@@ -214,26 +162,13 @@ Reverts for missing ETH, premature claims, and invalid deposits
 
 🪄 Events
 ---------
+| Event | Description |
+|--------|-------------|
+| `ChangeStakingPeriod(uint256)` | Fired when the owner updates staking duration. |
+| `DepositTokens(address,uint256)` | Fired when a user deposits tokens. |
+| `WithdrawTokens(address,uint256)` | Fired when a user withdraws staked tokens. |
+| `EtherSet(uint256)` | Fired when the owner funds ETH rewards. |
 
-Event
-
-Description
-
-`ChangeStakingPeriod(uint256)`
-
-Fired when the owner updates staking duration.
-
-`DepositTokens(address,uint256)`
-
-Fired when a user deposits tokens.
-
-`WithdrawTokens(address,uint256)`
-
-Fired when a user withdraws staked tokens.
-
-`EtherSet(uint256)`
-
-Fired when the owner funds ETH rewards.
 
 * * *
 
