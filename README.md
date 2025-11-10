@@ -11,25 +11,12 @@ Built and tested entirely using **Foundry** with **OpenZeppelin** libraries.
 
 The project includes two smart contracts and two test suites:
 
-Contract
-
-Description
-
-**StakingApp.sol**
-
-Core staking logic. Handles token deposits, withdrawals, and reward distribution in ETH.
-
-**StakingToken.sol**
-
-Minimal ERC20 token used for staking. Supports minting for testing/demo purposes.
-
-**StakingAppTest.t.sol**
-
-Foundry unit tests covering full staking logic.
-
-**StakingTokenTest.t.sol**
-
-Foundry tests for minting and token behavior.
+| File Name              | Description                                                                 |
+|-------------------------|------------------------------------------------------------------------------|
+| **StakingApp.sol**      | Core staking logic. Handles token deposits, withdrawals, and reward distribution in ETH. |
+| **StakingToken.sol**    | Minimal ERC20 token used for staking. Supports minting for testing/demo purposes. |
+| **StakingAppTest.t.sol** | Foundry unit tests covering full staking logic.                            |
+| **StakingTokenTest.t.sol** | Foundry tests for minting and token behavior.                           |
 
 * * *
 
