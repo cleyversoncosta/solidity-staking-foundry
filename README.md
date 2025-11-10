@@ -1,5 +1,3 @@
-  StakingApp README
-
 🧱 StakingApp – Fixed-Amount ERC20 Token Staking Contract (Foundry)
 ===================================================================
 
