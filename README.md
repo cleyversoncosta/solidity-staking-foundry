@@ -172,24 +172,6 @@ Check gas usage:
 
 * * *
 
-🧰 Environment Setup
---------------------
-
-    # Clone the repo
-    git clone <repo-url>
-    cd staking-app
-    
-    # Install dependencies
-    forge install
-    
-    # Build project
-    forge build
-    
-    # Run tests
-    forge test -vv
-    
-
-* * *
 
 🏗️ Built With
 --------------
